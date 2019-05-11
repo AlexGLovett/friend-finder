@@ -7,24 +7,15 @@ var path = require("path");
 module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  //handlebars routing
-  app.get("/", (req, res) => {
-    res.render("index", { title: "Home Page" });
+  // app.get("/", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "/../public/home.html"));
+  // });
+
+  app.get("/survey.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "/../public/survey.html"));
   });
 
-  app.get("/createdash", (req, res) => {
-    res.render("createdash", { title: "Create Dash", create: true });
-  });
-
-  app.get("/dashboard", (req, res) => {
-    res.render("dashboard", { title: "Dashboard", create: true });
-  });
-
-  app.get("/user", (req, res) => {
-    res.render("user", { title: "User" });
-  });
-
-  app.get("/datasets", (req, res) => {
-    res.render("datasets", { title: "My Datasets" });
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/../public/home.html"));
   });
 };

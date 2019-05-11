@@ -8,108 +8,198 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <title>Matchmaker</title>
   </head>
   <body>
-    <form>
-      <div class="card">
-        <div class="card-body">
-          <p class="my-2">What's your name?</p>
-          <input type="text" />
-          <p class="my-2">Please leave a link to your picture!</p>
-          <input type="text" />
+    <div class="container">
+      <form>
+        <div class="card">
+          <div class="card-body">
+            <p class="my-2">What's your name?</p>
+            <input type="text" class="userInput" id="userName" />
+            <p class="my-2">Please leave a link to your picture!</p>
+            <input type="text" class="userInput" id="userPic" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">I consider myself outgoing</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey1" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey1" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey1" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey1" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey1" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Other people give me energy</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey2" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey2" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey2" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey2" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey2" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">I am a goal-oriented person</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey3" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey3" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey3" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey3" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey3" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">I will do anything it takes to achieve my goals</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey4" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey4" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey4" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey4" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey4" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">The hardest decisions take the strongest wills</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey5" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey5" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey5" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey5" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey5" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">I should destroy half of the life in the universe</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey6" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey6" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey6" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey6" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey6" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">The original Dragon Ball Z had too much powering-up filler</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey7" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey7" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey7" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey7" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey7" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            The Klingons never should've been allowed into the federation
+          </div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey8" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey8" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey8" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey8" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey8" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Suicide Squad was a disgraceful waste of potential</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey9" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey9" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey9" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey9" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey9" value="5" /> Strongly Agree
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Dogs are better than Cats</div>
+          <div class="card-body">
+            <input type="radio" class="surveyInput" name="survey10" value="1" /> Strongly Disagree
+            <input type="radio" class="surveyInput" name="survey10" value="2" /> Disagree
+            <input type="radio" class="surveyInput" name="survey10" value="3" /> Neutral
+            <input type="radio" class="surveyInput" name="survey10" value="4" /> Agree
+            <input type="radio" class="surveyInput" name="survey10" value="5" /> Strongly Agree
+          </div>
+        </div>
+      </form>
+      <button id="submitSurvey">Submit to your Match Lords</button>
+    </div>
+
+    <div id="results-modal" class="modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img
+              id="match-img"
+              src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
+              alt=""
+            />
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey1" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey1" value="2" /> Disagree
-          <input type="radio" name="survey1" value="3" /> Neutral
-          <input type="radio" name="survey1" value="4" /> Agree
-          <input type="radio" name="survey1" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey2" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey2" value="2" /> Disagree
-          <input type="radio" name="survey2" value="3" /> Neutral
-          <input type="radio" name="survey2" value="4" /> Agree
-          <input type="radio" name="survey2" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey3" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey3" value="2" /> Disagree
-          <input type="radio" name="survey3" value="3" /> Neutral
-          <input type="radio" name="survey3" value="4" /> Agree
-          <input type="radio" name="survey3" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey4" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey4" value="2" /> Disagree
-          <input type="radio" name="survey4" value="3" /> Neutral
-          <input type="radio" name="survey4" value="4" /> Agree
-          <input type="radio" name="survey4" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey5" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey5" value="2" /> Disagree
-          <input type="radio" name="survey5" value="3" /> Neutral
-          <input type="radio" name="survey5" value="4" /> Agree
-          <input type="radio" name="survey5" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey6" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey6" value="2" /> Disagree
-          <input type="radio" name="survey6" value="3" /> Neutral
-          <input type="radio" name="survey6" value="4" /> Agree
-          <input type="radio" name="survey6" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey7" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey7" value="2" /> Disagree
-          <input type="radio" name="survey7" value="3" /> Neutral
-          <input type="radio" name="survey7" value="4" /> Agree
-          <input type="radio" name="survey7" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey8" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey8" value="2" /> Disagree
-          <input type="radio" name="survey8" value="3" /> Neutral
-          <input type="radio" name="survey8" value="4" /> Agree
-          <input type="radio" name="survey8" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey9" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey9" value="2" /> Disagree
-          <input type="radio" name="survey9" value="3" /> Neutral
-          <input type="radio" name="survey9" value="4" /> Agree
-          <input type="radio" name="survey9" value="5" /> Strongly Agree
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <input type="radio" name="survey10" value="1" checked /> Strongly Disagree
-          <input type="radio" name="survey10" value="2" /> Disagree
-          <input type="radio" name="survey10" value="3" /> Neutral
-          <input type="radio" name="survey10" value="4" /> Agree
-          <input type="radio" name="survey10" value="5" /> Strongly Agree
-        </div>
-      </div>
-    </form>
+    </div>
+
+    <script type="text/javascript">
+      // Capture the form inputs
+      $("#submitSurvey").on("click", function(event) {
+        event.preventDefault();
+
+        function validate($entry) {
+          $entry.each(function() {
+            if ($(this).val() === "") {
+              return false;
+            }
+          });
+          return true;
+        }
+
+        var val1 = validate($(".userInput"));
+        var val2 = validate($(".surveyInput"));
+        if (val1 && val2) {
+          var userData = {
+            name: $("#userName").val(),
+            photo: $("#userPic").val(),
+            scores: [
+              $("input[name='survey1']:checked").val(),
+              $("input[name='survey2']:checked").val(),
+              $("input[name='survey3']:checked").val(),
+              $("input[name='survey4']:checked").val(),
+              $("input[name='survey5']:checked").val(),
+              $("input[name='survey6']:checked").val(),
+              $("input[name='survey7']:checked").val(),
+              $("input[name='survey8']:checked").val(),
+              $("input[name='survey9']:checked").val(),
+              $("input[name='survey10']:checked").val()
+            ]
+          };
+
+          $.post("/api/friends", userData, function(data) {
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+
+            $("#results-modal").modal("toggle");
+          });
+        }
+      });
+    </script>
   </body>
 </html>
